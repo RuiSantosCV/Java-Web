@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+<ui:composition template="/template.xhtml">
+<ui:define name="head">
+	<title>Cadastro Universitário</title>
+	<h:outputStylesheet library="css" name="estilo.css" />
+</ui:define>
+
+<ui:define name="conteudo">
+		<h:form>
+			<h:dataTable value="#{alunoBean.listaConsulta}" var="aluno" styleClass="list"
+				headerClass="list-header" rowClasses="list-row"
+				columnClasses="list-column, list-column, list-column, list-column, list-column,list-column,list-column">
+
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					<h:outputText value="#{aluno.nome}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">E-mail</f:facet>
+					<h:outputText value="#{aluno.email}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">CPF</f:facet>
+					<h:outputText value="#{aluno.cpf}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Telefone</f:facet>
+					<h:outputText value="#{aluno.telefone}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Curso</f:facet>
+					<h:outputText value="#{aluno.curso}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Editar</f:facet>
+					<h:commandLink action="#{alunoBean.editar()}" >
+						<h:graphicImage library="imagem" name="editar.png" styleClass="edit"/>
+						<f:setPropertyActionListener target="#{alunoBean.aluno}"
+							value="#{aluno}" />
+					</h:commandLink>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Remover</f:facet>
+					<h:commandLink  action="#{alunoBean.remover()}" >
+						<h:graphicImage library="imagem" name="excluir.png" styleClass="delete"/>
+						<f:setPropertyActionListener target="#{alunoBean.aluno}"
+							value="#{aluno}" />
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+</ui:define>
+				
+</ui:composition>
+</html>

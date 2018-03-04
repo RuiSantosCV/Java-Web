@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/template.xhtml">
+	<ui:define name="head">
+		<title>Cadastro Universitário</title>
+		<h:outputStylesheet library="css" name="estilo.css" />
+	</ui:define>
+	<ui:define name="conteudo">
+
+		<h:dataTable value="#{alunoBean.listaConsulta}" var="aluno" styleClass="listConsulta" />
+			
+		<h3>#{alunoBean.aluno.nome}</h3>
+		<h3>#{alunoBean.aluno.email}</h3>
+		<h3>#{alunoBean.aluno.telefone}</h3>
+		<h3>#{alunoBean.aluno.cpf}</h3>
+		<h3>#{alunoBean.aluno.curso}</h3>
+
+		<h:form>
+		<h:commandButton value="Confirmar" action="#{alunoBean.salvar()}" styleClass="button" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

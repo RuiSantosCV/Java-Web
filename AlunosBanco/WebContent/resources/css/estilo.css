@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+
+.list {
+	border-collapse:collapse;
+	color: #6f6f80;
+  	margin: auto;
+	margin-bottom: 20px;
+	width: auto;
+	font-size: 12px;
+	border: 1px solid;
+}
+
+.list-header {
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid;
+}
+
+.list-row {
+	border: 1px solid;
+}
+
+.list-column {
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid;
+}
+
+.edit {
+	background-color: white;
+	background-repeat: no-repeat; 
+	background-size: contain;
+	height: 16px; 
+}
+
+.delete {
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 16px;
+}
+
+
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+

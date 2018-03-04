@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/template.xhtml">
+<ui:define name="head">
+	<h:outputStylesheet library="css" name="estilo.css" />
+</ui:define>
+
+	<ui:define name="conteudo">
+		<h:form>
+			<h:inputHidden value="#{alunoBean.aluno.id}" />
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome" for="inputNome" />
+				<h:inputText id="inputNome" value="#{alunoBean.aluno.nome}"
+					required="true" requiredMessage="Campo Nome obrigatório" validator="#{alunoBean.validarNome}" converter="upperCaseConverter"/>
+					
+				<h:outputLabel value="E-mail" for="inputEmail" />
+				<h:inputText id="inputEmail" value="#{alunoBean.aluno.email}"
+					required="true" requiredMessage="Campo E-mail obrigatório"  validator="#{alunoBean.validarEmail}" converter="upperCaseConverter"/>
+					
+				<h:outputLabel value="Telefone" for="inputTelefone" />
+				<h:inputText id="inputTelefone" value="#{alunoBean.aluno.telefone}"
+					required="true" requiredMessage="Campo Telefone obrigatório"  />
+				
+				<h:outputLabel value="CPF" for="inputCPF" />
+				<h:inputText id="inputCPF" value="#{alunoBean.aluno.cpf}"
+					required="true" requiredMessage="Campo CPF obrigatório"  validator = "#{alunoBean.validarCPF}"/>
+												
+				<h:outputLabel value="Curso" for="inputCurso" />
+				<h:selectOneMenu id="inputCurso" value="#{alunoBean.selectedCurso}" converter="CursoConverter">
+					<f:selectItems value="#{cursoBean.lista}" var="curso"
+						itemValue="#{curso}" itemLabel="#{curso.nome}" />
+				</h:selectOneMenu>
+				<h:commandButton value="Enviar" action="#{alunoBean.pre_salvo()}" styleClass="button" />
+			</h:panelGrid>
+		</h:form>
+		<h:messages style="border-style:solid; border-color:red;" />
+	</ui:define>
+
+</ui:composition>
+</html>

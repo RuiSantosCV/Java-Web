@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/template.xhtml">
+
+	<ui:define name="conteudo">
+		<h:form>
+			<h:panelGrid>
+				<h:commandLink value="Cadastrar" action="#{alunoBean.cadastrar()}" />
+				<h:commandLink value="Listar" action="#{alunoBean.listar()}" />
+				<h:commandLink value="Pesquisar" action="pesquisar" />
+			</h:panelGrid>
+		</h:form>	
+			
+	</ui:define>
+	
+		<ui:define name="menu">
+		</ui:define>
+		
+		
+		
+		
+</ui:composition>
+</html>
