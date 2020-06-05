@@ -9,16 +9,16 @@ public class AlunoDAO {
 
 	private String mensagem;
 
-	public static final String FALHA_CONEXAO = "Falha na conex„o com o banco de dados";
-	public static final String FALHA_OPERACAO = "Falha na operaÁ„o do banco de dados";
+	public static final String FALHA_CONEXAO = "Falha na conex√£o com o banco de dados";
+	public static final String FALHA_OPERACAO = "Falha na opera√ß√£o do banco de dados";
 	public static final String CADASTRO_SUCESSO = "Cadastro realizado com sucesso";
-	public static final String CADASTRO_INSUCESSO = "O cadastro n„o foi realizado";
-	public static final String CONSULTA_VAZIA = "A consulta n„o retornou resultados";
+	public static final String CADASTRO_INSUCESSO = "O cadastro n√£o foi realizado";
+	public static final String CONSULTA_VAZIA = "A consulta n√£o retornou resultados";
 	public static final String CONSULTA_SUCESSO = "Consulta realizada com sucesso";
-	public static final String ATUALIZACAO_SUCESSO = "AtualizaÁ„o realizada com sucesso";
-	public static final String ATUALIZACAO_INSUCESSO = "A atualizaÁ„o n„o foi realizada";
-	public static final String EXCLUSAO_SUCESSO = "Exclus„o realizada com sucesso";
-	public static final String EXCLUSAO_INSUCESSO = "A exclus„o n„o foi realizada";
+	public static final String ATUALIZACAO_SUCESSO = "Atualiza√ß√£o realizada com sucesso";
+	public static final String ATUALIZACAO_INSUCESSO = "A atualiza√ß√£o n√£o foi realizada";
+	public static final String EXCLUSAO_SUCESSO = "Exclus√£o realizada com sucesso";
+	public static final String EXCLUSAO_INSUCESSO = "A exclus√£o n√£o foi realizada";
 
 	public String getMensagem() {
 		return mensagem;
